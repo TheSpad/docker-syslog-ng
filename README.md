@@ -15,7 +15,7 @@ We bring you another container release featuring:
 [![License](https://img.shields.io/github/license/thespad/docker-syslog-ng?color=94398d&logo=Github&logoColor=ffffff&style=for-the-badge)](#)
 [![Commits](https://img.shields.io/github/commits-since/thespad/docker-syslog-ng/latest?color=94398d&include_prereleases&logo=github&style=for-the-badge)](#)
 
-[syslog-ng](https://www.syslog-ng.com/) is a small Open Source utility for managing and syslog-ngoring Unix systems.
+[syslog-ng](https://www.syslog-ng.com/) allows you to flexibly collect, parse, classify, rewrite and correlate logs from across your infrastructure and store or route them to log analysis tools.
 
 ## Supported Architectures
 
@@ -35,7 +35,7 @@ The architectures supported by this image are:
 
 Edit `/config/syslog-ng.conf` to configure your logging sources and destinations.
 
-More info at [syslog-ng](https://www.syslog-ng.com/).
+More info at [syslog-ng](https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition).
 
 ## Usage
 
