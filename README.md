@@ -35,6 +35,8 @@ The architectures supported by this image are:
 
 Edit `/config/syslog-ng.conf` to configure your logging sources and destinations.
 
+Note that this application runs as root in the container.
+
 More info at [syslog-ng](https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition).
 
 ## Usage
@@ -56,6 +58,7 @@ services:
       - TZ=Europe/London
     volumes:
       - </path/to/appdata/config>:/config
+      - </path/to/logs>:/var/log #optional
     ports:
       - 514:514/udp
       - 601:601/tcp
@@ -73,6 +76,7 @@ docker run -d \
   -p 601:601/tcp \
   -p 6514:6514/tcp \
   -v </path/to/appdata/config>:/config \
+  -v </path/to/logs>:/var/log \ #optional
   --restart unless-stopped \
   ghcr.io/thespad/syslog-ng
 ```
@@ -88,6 +92,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-p 6514:6514/tcp` | syslog TLS |
 | `-e TZ=America/New_York` | Specify a timezone to use EG America/New_York |
 | `-v /config` | Contains all relevant configuration files. |
+| `-v /var/log` | Contains the logs collected by the syslog-ng service |
 
 ## Environment variables from files (Docker secrets)
 
