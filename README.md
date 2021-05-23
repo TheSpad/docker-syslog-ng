@@ -35,8 +35,6 @@ The architectures supported by this image are:
 
 Edit `/config/syslog-ng.conf` to configure your logging sources and destinations.
 
-Note that this application runs as root in the container.
-
 More info at [syslog-ng](https://www.syslog-ng.com/technical-documents/list/syslog-ng-open-source-edition).
 
 ## Usage
