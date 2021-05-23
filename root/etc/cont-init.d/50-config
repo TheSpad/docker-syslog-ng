@@ -2,8 +2,8 @@
 
 #Copy defaults
 if [ ! -f "/config/syslog-ng.conf" ]; then
-	cp -a /defaults/syslog-ng.conf /config/syslog-ng.conf
+    cp -a /defaults/syslog-ng.conf /config/syslog-ng.conf
 fi
 
 chown -R abc:abc \
-	/config
+    /config
