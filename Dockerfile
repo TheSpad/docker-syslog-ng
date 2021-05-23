@@ -26,6 +26,6 @@ RUN \
 
 COPY root/ /
 
-EXPOSE 514/udp 601/tcp 6514/tcp
+EXPOSE 5514/udp 6601/tcp 6514/tcp
 
 VOLUME /config
