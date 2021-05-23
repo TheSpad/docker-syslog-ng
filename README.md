@@ -55,6 +55,8 @@ services:
     image: ghcr.io/thespad/syslog-ng
     container_name: syslog-ng
     environment:
+      - PUID=1000
+      - PGID=1000
       - TZ=Europe/London
     volumes:
       - </path/to/appdata/config>:/config
@@ -71,6 +73,8 @@ services:
 ```shell
 docker run -d \
   --name=syslog-ng \
+  -e PUID=1000 \
+  -e PGID=1000 \
   -e TZ=Europe/London \
   -p 514:5514/udp \
   -p 601:6601/tcp \
@@ -90,6 +94,8 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-p 514:5514/udp` | syslog UDP |
 | `-p 601:6601/tcp` | syslog TCP |
 | `-p 6514:6514/tcp` | syslog TLS |
+| `-e PUID=1000` | for UserID - see below for explanation |
+| `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=America/New_York` | Specify a timezone to use EG America/New_York |
 | `-v /config` | Contains all relevant configuration files. |
 | `-v /var/log` | Contains the logs collected by the syslog-ng service |
