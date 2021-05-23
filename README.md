@@ -60,8 +60,8 @@ services:
       - </path/to/appdata/config>:/config
       - </path/to/logs>:/var/log #optional
     ports:
-      - 514:514/udp
-      - 601:601/tcp
+      - 514:5514/udp
+      - 601:6601/tcp
       - 6514:6514/tcp
     restart: unless-stopped
 ```
@@ -72,8 +72,8 @@ services:
 docker run -d \
   --name=syslog-ng \
   -e TZ=Europe/London \
-  -p 514:514/udp \
-  -p 601:601/tcp \
+  -p 514:5514/udp \
+  -p 601:6601/tcp \
   -p 6514:6514/tcp \
   -v </path/to/appdata/config>:/config \
   -v </path/to/logs>:/var/log \ #optional
@@ -87,8 +87,8 @@ Container images are configured using parameters passed at runtime (such as thos
 
 | Parameter | Function |
 | :----: | --- |
-| `-p 514:514/udp` | syslog UDP |
-| `-p 601:601/tcp` | syslog TCP |
+| `-p 514:5514/udp` | syslog UDP |
+| `-p 601:6601/tcp` | syslog TCP |
 | `-p 6514:6514/tcp` | syslog TLS |
 | `-e TZ=America/New_York` | Specify a timezone to use EG America/New_York |
 | `-v /config` | Contains all relevant configuration files. |
