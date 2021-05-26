@@ -7,7 +7,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/thespad/syslog-ng.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/thespad/syslog-ng)
 [![Docker Stars](https://img.shields.io/docker/stars/thespad/syslog-ng.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/thespad/syslog-ng)
 
-[AdGuardHome sync](https://github.com/bakito/syslog-ng) allows you to flexibly collect, parse, classify, rewrite and correlate logs from across your infrastructure and store or route them to log analysis tools.
+[syslog-ng](https://github.com/bakito/syslog-ng) allows you to flexibly collect, parse, classify, rewrite and correlate logs from across your infrastructure and store or route them to log analysis tools.
 
 ## This image is now deprecated in favour of the [Linuxserver.io version](https://github.com/linuxserver/docker-syslog-ng) which I am maintaining based off the same code.
 
